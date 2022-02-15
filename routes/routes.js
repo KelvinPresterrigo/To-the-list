@@ -1,5 +1,5 @@
-const routes = require("express").Router();
-const TaskController = require("../controller/Taskcontroller")
+const routes = require("express").Router(); //metodo pra utilizar as rotas
+const TaskController = require("../controller/Taskcontroller") //impostação do metodo
 
 routes.get("/", TaskController.getAll)
 
