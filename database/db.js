@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const connectToDb = () => {
   mongoose
     .connect(
-       "mongodb+srv://Beck:<password>@todolist.1nijp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+       "mongodb+srv://roots:admin@todolist.1nijp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
