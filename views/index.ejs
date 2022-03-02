@@ -10,6 +10,13 @@
   </head>
   <body>
 
+    <% if (message != "") {%>
+      <section class="message message-<%= type %>">
+          <p><%= message %></p>
+          <span id="close-message"><i class="bi bi-x"></i></span>
+      </section>
+      <% } %>
+
     <header>
       <% if(task == null) {%>
         <form action="/create" method="post">
@@ -56,8 +63,13 @@
 
         <hr>
         <p>Deseja realmente apagar a tarefa: <%= taskDelete.task %>?</p>
-        <a href="/">Não</a>
-        <a href="/deleteOne/<%= taskDelete._id %>">Sim</a>
+
+        <div id="btns"> 
+        <a id="btnNot" href="/">Não</a>
+        <a id="btnYes" href="/deleteOne/<%= taskDelete._id %>">Sim</a>
+
+        </div>
+        
       </div>
     </section>
     <% } %>
