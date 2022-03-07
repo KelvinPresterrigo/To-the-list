@@ -82,7 +82,6 @@ const createTask = async (req, res) => {
 const taskCheck = async (req, res) =>{
   try{
     const task = await Task.findOne({_id: req.params.id});
-    
     task.check ? task.check = false : task.check = true
     
    /*if (task.check){
@@ -96,8 +95,6 @@ const taskCheck = async (req, res) =>{
     res.status(500).send({ error: err.message });
   }
 }
-
-
 
 
 module.exports = {
